@@ -9,49 +9,71 @@
     <LinearLayout
         android:layout_width="410dp"
         android:layout_height="500dp"
+        android:orientation="vertical"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="230dp"
-        android:orientation="vertical">
+        tools:layout_editor_absoluteY="96dp">
+
 
         <LinearLayout
             android:layout_width="410dp"
             android:layout_height="100dp"
+            android:orientation="horizontal"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="300dp"
-            android:orientation="horizontal">
-
-
-            <Button
-                android:id="@+id/btn1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:text="회원가입" />
-
-            <Button
-                android:id="@+id/btn2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:text="로그인"/>
+            tools:layout_editor_absoluteY="300dp">
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="410dp"
-            android:layout_height="100dp"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="300dp"
-            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/logintext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal"
+            android:text="가치하자"
+            android:textAlignment="center"
+            android:textColor="@color/purple_200"
+            android:textSize="25dp"
+            android:textStyle="bold" />
 
-        </LinearLayout>
+        <EditText
+            android:id="@+id/edittext_email"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress" />
 
+        <EditText
+            android:id="@+id/edittext_password"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword" />
 
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#ffffff"
+            android:text="로그인" />
+
+        <Button
+            android:id="@+id/btn_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#ffffff"
+            android:text="회원가입" />
 
     </LinearLayout>
-    
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

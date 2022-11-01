@@ -15,23 +15,23 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        Button button1 = (Button) findViewById(R.id.btn1);
+        Button button1 = (Button) findViewById(R.id.btn_login); //로그인
         button1.setOnClickListener(new View.OnClickListener() {
 
             //@Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), JoinActivity.class);
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);
             }
 
         });
 
-        Button button2 = (Button) findViewById(R.id.btn2);
+        Button button2 = (Button) findViewById(R.id.btn_signup); //회원가입
         button2.setOnClickListener(new View.OnClickListener() {
 
             //@Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                Intent intent = new Intent(getApplicationContext(), JoinActivity.class);
                 startActivity(intent);
             }
 
