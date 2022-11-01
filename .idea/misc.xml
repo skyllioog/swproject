@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/sw221103/app/src/main/res/layout/activity_main.xml" value="0.2602739726027397" />
+        <entry key="..\:/sw221103/app/src/main/res/layout/intro_activity.xml" value="0.1" />
+        <entry key="..\:/sw221103/app/src/main/res/layout/join.xml" value="0.1" />
         <entry key="..\:/sw221103/app/src/main/res/layout/koreafoodpage.xml" value="0.11296296296296296" />
         <entry key="..\:/sw221103/app/src/main/res/layout/login.xml" value="0.1" />
         <entry key="..\:/sw221103/app/src/main/res/layout/subactivity_main.xml" value="0.1" />
