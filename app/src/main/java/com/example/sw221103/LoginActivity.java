@@ -1,5 +1,5 @@
 package com.example.sw221103;
-
+/*
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -26,11 +26,10 @@ public class LoginActivity extends AppCompatActivity {
     private Button buttonLogIn;
     private Button buttonSignUp;
 
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
+        setContentView(R.layout.activity_main);
         firebaseAuth = FirebaseAuth.getInstance();
 
         editTextEmail = (EditText) findViewById(R.id.edittext_email);
@@ -63,7 +62,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
-                    Intent intent = new Intent(LoginActivity.this, JoinActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                     startActivity(intent);
                     finish();
                 } else {
@@ -102,3 +101,4 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 }
+ */
