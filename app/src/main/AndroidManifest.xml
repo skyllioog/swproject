@@ -31,6 +31,18 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
+        <activity
+            android:name=".eat_activity"
+            android:exported="false" />
+
+        <activity
+            android:name=".floating"
+            android:exported="false" />
+
+        <activity
+            android:name=".MyActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>

@@ -132,10 +132,11 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
         app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/imagePen"
+    <Button
+        android:id="@+id/Pen_button"
         android:layout_width="55dp"
         android:layout_height="59dp"
+        android:drawableBottom="@drawable/study"
         android:src="@drawable/study"
         app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintEnd_toEndOf="parent"
@@ -156,10 +157,11 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.34" />
 
-    <ImageView
-        android:id="@+id/imageExer"
+    <Button
+        android:id="@+id/Exer_button"
         android:layout_width="55dp"
         android:layout_height="59dp"
+        android:drawableBottom="@drawable/exercise"
         android:src="@drawable/exercise"
         app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintEnd_toEndOf="parent"
@@ -180,10 +182,11 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.343" />
 
-    <ImageView
-        android:id="@+id/imageFood"
+    <Button
+        android:id="@+id/eat_button"
         android:layout_width="55dp"
         android:layout_height="59dp"
+        android:drawableBottom="@drawable/eat"
         android:src="@drawable/eat"
         app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintEnd_toEndOf="parent"
@@ -204,10 +207,11 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.345" />
 
-    <ImageView
-        android:id="@+id/imageTog"
+    <Button
+        android:id="@+id/Tog_button"
         android:layout_width="55dp"
         android:layout_height="59dp"
+        android:drawableBottom="@drawable/together"
         android:src="@drawable/together"
         app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintEnd_toEndOf="parent"
@@ -228,10 +232,11 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.482" />
 
-    <ImageView
-        android:id="@+id/imageShop"
+    <Button
+        android:id="@+id/Shop_button"
         android:layout_width="55dp"
         android:layout_height="59dp"
+        android:drawableBottom="@drawable/shopping"
         android:src="@drawable/shopping"
         app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintEnd_toEndOf="parent"
@@ -252,10 +257,11 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.483" />
 
-    <ImageView
-        android:id="@+id/imageDeli"
+    <Button
+        android:id="@+id/Deli_button"
         android:layout_width="55dp"
         android:layout_height="59dp"
+        android:drawableBottom="@drawable/delivery"
         android:src="@drawable/delivery"
         app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintEnd_toEndOf="parent"
@@ -304,8 +310,8 @@
 
     <TextView
         android:id="@+id/textviewUserEmail"
-        android:layout_width="233dp"
-        android:layout_height="44dp"
+        android:layout_width="136dp"
+        android:layout_height="40dp"
         android:layout_marginStart="28dp"
         android:text="text"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -320,10 +326,21 @@
         android:text="로그아웃"
         app:layout_constraintBottom_toBottomOf="@+id/imageView9"
         app:layout_constraintEnd_toEndOf="@+id/imageView9"
-        app:layout_constraintHorizontal_bias="0.628"
+        app:layout_constraintHorizontal_bias="0.198"
         app:layout_constraintStart_toEndOf="@+id/textviewUserEmail"
         app:layout_constraintTop_toTopOf="@+id/imageView9"
-        app:layout_constraintVertical_bias="0.136" />
+        app:layout_constraintVertical_bias="0.529" />
+
+    <Button
+        android:id="@+id/buttonMy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:text="My"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+        app:layout_constraintEnd_toEndOf="@+id/imageView9"
+        app:layout_constraintTop_toTopOf="@+id/imageView9"
+        app:layout_constraintVertical_bias="0.45" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,11 +17,31 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     private TextView textViewUserEmail;
     private FirebaseAuth firebaseAuth;
     private Button buttonLogout;
+    private Button buttonMy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        Button eat_button = (Button) findViewById(R.id.eat_button);
+        eat_button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), eat_activity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button buttonMy = (Button) findViewById(R.id.buttonMy);
+        buttonMy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, MyActivity.class);
+                startActivity(intent);
+            }
+        });
 
         textViewUserEmail = (TextView) findViewById(R.id.textviewUserEmail);
         buttonLogout = (Button) findViewById(R.id.buttonLogout);
@@ -44,6 +64,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(new Intent(this, MainActivity.class));
         }
     }
+
+
+
+
 
 
 }
