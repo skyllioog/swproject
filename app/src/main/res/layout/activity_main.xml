@@ -4,76 +4,112 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    android:background="@color/white"
+    tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="410dp"
-        android:layout_height="500dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="96dp">
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="138dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="246dp"
+        android:layout_marginTop="83dp"
+        android:layout_marginEnd="27dp"
+        android:src="@drawable/bubble"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/edittext_email"
+        android:layout_width="304dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="21dp"
+        android:background="@drawable/et_line2"
+        android:ems="10"
 
-        <LinearLayout
-            android:layout_width="410dp"
-            android:layout_height="100dp"
-            android:orientation="horizontal"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="300dp">
+        android:hint="이메일"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/edittext_password"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-        </LinearLayout>
+    <EditText
+        android:id="@+id/edittext_password"
+        android:layout_width="304dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="55dp"
 
-        <TextView
-            android:id="@+id/logintext"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:gravity="center_horizontal"
-            android:text="가치하자"
-            android:textAlignment="center"
-            android:textColor="@color/purple_200"
-            android:textSize="25dp"
-            android:textStyle="bold" />
+        android:layout_marginTop="-15dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="52dp"
+        android:background="@drawable/et_line2"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/btn_pass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edittext_email" />
 
-        <EditText
-            android:id="@+id/edittext_email"
-            android:layout_width="wrap_content"
-            android:layout_height="46dp"
-            android:layout_gravity="center"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:ems="10"
-            android:hint="E-mail"
-            android:inputType="textEmailAddress" />
+    <Button
+        android:id="@+id/btn_pass"
+        android:layout_width="218dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="97dp"
+        android:background="@drawable/et_line"
+        android:fontFamily="@font/fontstyle"
+        android:text="로그인"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edittext_password" />
 
-        <EditText
-            android:id="@+id/edittext_password"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:hint="Password"
-            android:inputType="textPassword" />
+    <Button
+        android:id="@+id/btn_join"
+        android:layout_width="218dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="101dp"
+        android:background="@drawable/et_line"
+        android:fontFamily="@font/fontstyle"
+        android:text="회원가입"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_pass" />
 
-        <Button
-            android:id="@+id/btn_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="#ffffff"
-            android:text="로그인" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="185dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="113dp"
+        android:layout_marginEnd="113dp"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/fontstyle"
+        android:text="가치 하자"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/edittext_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
-        <Button
-            android:id="@+id/btn_signup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="#ffffff"
-            android:text="회원가입" />
-
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

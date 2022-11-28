@@ -3,11 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/sw221103/app/src/main/res/layout/activity_home.xml" value="0.175" />
-        <entry key="..\:/sw221103/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/sw221103/app/src/main/res/drawable/android_lar.xml" value="0.135" />
+        <entry key="..\:/sw221103/app/src/main/res/drawable/android_lar2.xml" value="0.1" />
+        <entry key="..\:/sw221103/app/src/main/res/drawable/android_lar3.xml" value="0.1" />
+        <entry key="..\:/sw221103/app/src/main/res/drawable/et_line.xml" value="0.1" />
+        <entry key="..\:/sw221103/app/src/main/res/drawable/et_line2.xml" value="0.1" />
+        <entry key="..\:/sw221103/app/src/main/res/drawable/et_line3.xml" value="0.1" />
+        <entry key="..\:/sw221103/app/src/main/res/layout/activity_home.xml" value="0.3333333333333333" />
+        <entry key="..\:/sw221103/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/sw221103/app/src/main/res/layout/activity_passwd_reset.xml" value="0.1" />
+        <entry key="..\:/sw221103/app/src/main/res/layout/calendar.xml" value="0.175" />
         <entry key="..\:/sw221103/app/src/main/res/layout/home.xml" value="0.17395833333333333" />
         <entry key="..\:/sw221103/app/src/main/res/layout/intro_activity.xml" value="0.1" />
         <entry key="..\:/sw221103/app/src/main/res/layout/join.xml" value="0.22" />
+        <entry key="..\:/sw221103/app/src/main/res/layout/join1.xml" value="0.175" />
         <entry key="..\:/sw221103/app/src/main/res/layout/koreafoodpage.xml" value="0.11296296296296296" />
         <entry key="..\:/sw221103/app/src/main/res/layout/login.xml" value="0.1" />
         <entry key="..\:/sw221103/app/src/main/res/layout/subactivity_main.xml" value="0.1" />

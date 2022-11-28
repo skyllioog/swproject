@@ -1,10 +1,13 @@
 package com.example.sw221103;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,6 +15,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.ActionCodeSettings;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -34,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         editTextEmail = (EditText) findViewById(R.id.edittext_email);
         editTextPassword = (EditText) findViewById(R.id.edittext_password);
 
-        buttonSignUp = (Button) findViewById(R.id.btn_signup);
+        buttonSignUp = (Button) findViewById(R.id.btn_join);
         buttonSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        buttonLogIn = (Button) findViewById(R.id.btn_login);
+        buttonLogIn = (Button) findViewById(R.id.btn_pass);
         buttonLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
     }
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -127,4 +132,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
      */
+
+
 }
