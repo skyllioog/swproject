@@ -36,6 +36,26 @@
             android:exported="false" />
 
         <activity
+            android:name=".study_activity"
+            android:exported="false" />
+
+        <activity
+            android:name=".delivery_activity"
+            android:exported="false" />
+
+        <activity
+            android:name=".exercise_activity"
+            android:exported="false" />
+
+        <activity
+            android:name=".together_activity"
+            android:exported="false" />
+
+        <activity
+            android:name=".shopping_activity"
+            android:exported="false" />
+
+        <activity
             android:name=".floating"
             android:exported="false" />
 
