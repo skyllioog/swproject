@@ -83,6 +83,16 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
+        Button next_button = (Button) findViewById(R.id.next_button);
+        next_button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), calendarActivity.class);
+                startActivity(intent);
+            }
+        });
+
         Button buttonMy = (Button) findViewById(R.id.buttonMy);
         buttonMy.setOnClickListener(new View.OnClickListener() {
             @Override
