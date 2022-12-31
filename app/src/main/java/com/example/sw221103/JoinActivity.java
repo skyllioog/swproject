@@ -18,12 +18,15 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.ActionCodeSettings;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import android.util.Log;
 
 public class JoinActivity extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
+    private DatabaseReference mDatabaseReference;
     private EditText editTextEmail;
     private EditText editTextPassword;
     private EditText editTextName;
@@ -37,6 +40,7 @@ public class JoinActivity extends AppCompatActivity {
         setContentView(R.layout.join);
 
         firebaseAuth = FirebaseAuth.getInstance();
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference("FirebaseEmailAccount");
 
         editTextEmail = (EditText) findViewById(R.id.edittext_email);
         editTextPassword = (EditText) findViewById(R.id.edittext_password);
@@ -55,31 +59,12 @@ public class JoinActivity extends AppCompatActivity {
                 }
             }
         });
-/*
-        buttonJoine = (Button) findViewById(R.id.btn_ejoin);
-        buttonJoine.setOnClickListener(new View.OnClickListener() {
-            @Override
-
-            public void onClick(View v) {
-                if (!editTextEmail.getText().toString().equals("")) {
-                    // 이메일과 비밀번호가 공백이 아닌 경우
-                    //createUser(editTextEmail.getText().toString());
-                    FirebaseUser user = firebaseAuth.getCurrentUser();//해당기기의 언어 설정
-
-                    Log.d(TAG, "Email sent.");
-                    Toast.makeText(JoinActivity.this,
-                            "Verification email sent to " + user.getEmail(),
-                            Toast.LENGTH_SHORT).show();
-                } else {
-                    // 이메일과 비밀번호가 공백인 경우
-                    Toast.makeText(JoinActivity.this, "계정을 입력하세요.", Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-        */
-
     }
     private void createUser(String email, String password, String name) {
+        String strEmail = editTextEmail.getText().toString();
+        String strPwd = editTextPassword.getText().toString();
+        String strName = editTextName.getText().toString();
+
         firebaseAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -90,6 +75,14 @@ public class JoinActivity extends AppCompatActivity {
                             finish();
 
                             FirebaseUser user = firebaseAuth.getCurrentUser();//해당기기의 언어 설정
+                            User account = new User();
+                            account.setEmail(strEmail);
+                            account.setPassword(strPwd);
+                            account.setName(strName);
+                            account.setIdToken(user.getUid());
+
+                            //database에 저장
+                            mDatabaseReference.child("User").child(user.getUid()).setValue(account);
 
                             user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
