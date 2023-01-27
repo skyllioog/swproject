@@ -38,8 +38,12 @@
             android:exported="false" />
 
         <activity
+            android:name=".WriteActivity"
+            android:exported="false"/>
+
+        <activity
             android:name=".study_activity"
-            android:exported="false" />
+            android:exported="false"/>
 
         <activity
             android:name=".delivery_activity"
@@ -68,6 +72,11 @@
         <activity
             android:name=".MyActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".TodoActivity"
+            android:exported="false"/>
+
 
     </application>
 </manifest>

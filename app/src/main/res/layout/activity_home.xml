@@ -305,7 +305,7 @@
         android:id="@+id/imageView9"
         android:layout_width="413dp"
         android:layout_height="99dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="40dp"
         android:src="@drawable/android_lar2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -335,6 +335,19 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView9"
         app:layout_constraintTop_toTopOf="@+id/imageView9"
         app:layout_constraintVertical_bias="0.45" />
+
+    <Button
+        android:id="@+id/buttonTodo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00ff0000"
+        android:text="Todo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView9"
+        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.967" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,21 +14,29 @@
         <entry key="..\:/sw221103/app/src/main/res/layout/activity_passwd_reset.xml" value="0.1" />
         <entry key="..\:/sw221103/app/src/main/res/layout/calendar.xml" value="0.175" />
         <entry key="..\:/sw221103/app/src/main/res/layout/calendar_main.xml" value="0.175" />
+        <entry key="..\:/sw221103/app/src/main/res/layout/context_main.xml" value="0.17395833333333333" />
+        <entry key="..\:/sw221103/app/src/main/res/layout/day.xml" value="0.1" />
         <entry key="..\:/sw221103/app/src/main/res/layout/delivery_main.xml" value="0.17395833333333333" />
         <entry key="..\:/sw221103/app/src/main/res/layout/eat_main.xml" value="0.1" />
         <entry key="..\:/sw221103/app/src/main/res/layout/exercise_main.xml" value="0.17395833333333333" />
+        <entry key="..\:/sw221103/app/src/main/res/layout/fragment_main.xml" value="0.25" />
         <entry key="..\:/sw221103/app/src/main/res/layout/home.xml" value="0.17395833333333333" />
         <entry key="..\:/sw221103/app/src/main/res/layout/intro_activity.xml" value="0.1" />
         <entry key="..\:/sw221103/app/src/main/res/layout/join.xml" value="0.22" />
         <entry key="..\:/sw221103/app/src/main/res/layout/join1.xml" value="0.175" />
         <entry key="..\:/sw221103/app/src/main/res/layout/koreafoodpage.xml" value="0.11296296296296296" />
+        <entry key="..\:/sw221103/app/src/main/res/layout/list_item.xml" value="0.175" />
         <entry key="..\:/sw221103/app/src/main/res/layout/login.xml" value="0.1" />
+        <entry key="..\:/sw221103/app/src/main/res/layout/maintitle.xml" value="0.17395833333333333" />
         <entry key="..\:/sw221103/app/src/main/res/layout/my_activity.xml" value="0.16666666666666666" />
         <entry key="..\:/sw221103/app/src/main/res/layout/shopping_main.xml" value="0.17395833333333333" />
         <entry key="..\:/sw221103/app/src/main/res/layout/study_main.xml" value="0.17395833333333333" />
         <entry key="..\:/sw221103/app/src/main/res/layout/subactivity_main.xml" value="0.1" />
+        <entry key="..\:/sw221103/app/src/main/res/layout/todo_list.xml" value="0.175" />
+        <entry key="..\:/sw221103/app/src/main/res/layout/todo_main.xml" value="0.175" />
+        <entry key="..\:/sw221103/app/src/main/res/layout/todolist.xml" value="0.175" />
         <entry key="..\:/sw221103/app/src/main/res/layout/together_main.xml" value="0.17395833333333333" />
-        <entry key="..\:/sw221103/app/src/main/res/layout/write.xml" value="0.1175925925925926" />
+        <entry key="..\:/sw221103/app/src/main/res/layout/write.xml" value="0.14666666666666667" />
         <entry key="..\:/sw221103/app/src/main/res/menu/main_menu.xml" value="0.1" />
         <entry key="..\:/sw221103/app/src/main/res/xml/file_paths.xml" value="0.1" />
       </map>

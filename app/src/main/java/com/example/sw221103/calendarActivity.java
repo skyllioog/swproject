@@ -11,6 +11,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
@@ -22,12 +27,18 @@ public class calendarActivity extends AppCompatActivity
     public Button cha_Btn, del_Btn, save_Btn;
     public TextView diaryTextView, textView2, textView3;
     public EditText contextEditText;
+    private DatabaseReference mDatabaseReference;
+    private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calendar_main);
+
+        firebaseAuth = FirebaseAuth.getInstance();
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference("calendar");
+
         calendarView = findViewById(R.id.calendarView);
         diaryTextView = findViewById(R.id.diaryTextView);
         save_Btn = findViewById(R.id.save_Btn);
@@ -58,6 +69,8 @@ public class calendarActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
+                String context = contextEditText.getText().toString();
+
                 saveDiary(readDay);
                 str = contextEditText.getText().toString();
                 textView2.setText(str);
@@ -67,12 +80,20 @@ public class calendarActivity extends AppCompatActivity
                 contextEditText.setVisibility(View.INVISIBLE);
                 textView2.setVisibility(View.VISIBLE);
 
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                CUser schedule = new CUser();
+                schedule.setcontext(context);
+                schedule.setIdToken(user.getUid());
+
+                mDatabaseReference.child("CUser").child(user.getUid()).setValue(schedule);
+
             }
         });
     }
 
     public void checkDay(int cYear, int cMonth, int cDay)
     {
+
         readDay = "" + cYear + "-" + (cMonth + 1) + "" + "-" + cDay + ".txt";
         FileInputStream fis;
 
@@ -107,6 +128,8 @@ public class calendarActivity extends AppCompatActivity
                     cha_Btn.setVisibility(View.INVISIBLE);
                     del_Btn.setVisibility(View.INVISIBLE);
                     textView2.setText(contextEditText.getText());
+
+
                 }
 
             });
@@ -139,6 +162,8 @@ public class calendarActivity extends AppCompatActivity
         {
             e.printStackTrace();
         }
+
+
     }
 
     @SuppressLint("WrongConstant")

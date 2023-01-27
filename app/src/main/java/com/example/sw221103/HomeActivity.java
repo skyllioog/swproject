@@ -17,6 +17,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     private FirebaseAuth firebaseAuth;
     private Button buttonLogout;
     private Button buttonMy;
+    private Button buttonTodo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,6 +99,15 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomeActivity.this, MyActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button buttonTodo = (Button) findViewById(R.id.buttonTodo);
+        buttonTodo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, TodoActivity.class);
                 startActivity(intent);
             }
         });
