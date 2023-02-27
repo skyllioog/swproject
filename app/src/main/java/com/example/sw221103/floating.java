@@ -2,7 +2,7 @@ package com.example.sw221103;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
-
+/*
 public class floating extends AppCompatActivity {
 
     @Override
@@ -12,3 +12,4 @@ public class floating extends AppCompatActivity {
 
     }
 }
+*/

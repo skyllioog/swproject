@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -16,14 +17,12 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
     private FirebaseAuth firebaseAuth;
     private Button buttonLogout;
-    private Button buttonMy;
-    private Button buttonTodo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
+/*
         Button study_button = (Button) findViewById(R.id.Pen_button);
         study_button.setOnClickListener(new View.OnClickListener() {
 
@@ -46,7 +45,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
         Button exercise_button = (Button) findViewById(R.id.Exer_button);
         exercise_button.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), exercise_activity.class);
@@ -89,10 +87,59 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), calendarActivity.class);
+                Intent intent = new Intent(getApplicationContext(), TodoActivity.class);
                 startActivity(intent);
             }
         });
+
+ */
+        Button TODO = (Button) findViewById(R.id.todo);
+        TODO.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), TodoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageView main = (ImageView) findViewById(R.id.imageView3);
+        main.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        Button butstudy = (Button) findViewById(R.id.butstudy);
+        butstudy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), study_activity2.class);
+                startActivity(intent);
+            }
+        });
+
+        Button buttonTest = (Button) findViewById(R.id.test);
+        buttonTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, Test.class);
+                startActivity(intent);
+            }
+        });
+
+        Button board = (Button) findViewById(R.id.board);
+        board.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, Test.class);
+                startActivity(intent);
+            }
+        });
+
 
         Button buttonMy = (Button) findViewById(R.id.buttonMy);
         buttonMy.setOnClickListener(new View.OnClickListener() {
@@ -103,14 +150,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-        Button buttonTodo = (Button) findViewById(R.id.buttonTodo);
-        buttonTodo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, TodoActivity.class);
-                startActivity(intent);
-            }
-        });
 
         buttonLogout = (Button) findViewById(R.id.buttonLogout);
 

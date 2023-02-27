@@ -10,7 +10,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
+/*
 public class shopping_activity extends AppCompatActivity {
 
     @Override
@@ -36,3 +36,4 @@ public class shopping_activity extends AppCompatActivity {
     }
 }
 
+*/

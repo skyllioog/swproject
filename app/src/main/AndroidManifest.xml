@@ -62,10 +62,6 @@
             android:exported="false" />
 
         <activity
-            android:name=".calendarActivity"
-            android:exported="false" />
-
-        <activity
             android:name=".floating"
             android:exported="false" />
 
@@ -77,6 +73,21 @@
             android:name=".TodoActivity"
             android:exported="false"/>
 
+        <activity
+            android:name=".study_activity2"
+            android:exported="false"/>
+
+        <activity
+            android:name=".Test"
+            android:exported="false"/>
+
+        <activity
+            android:name=".ListActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".UpdateActivity"
+            android:exported="false"/>
 
     </application>
 </manifest>
