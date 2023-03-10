@@ -49,22 +49,22 @@
 
     <EditText
         android:id="@+id/name_edit"
-        android:layout_width="223dp"
-        android:layout_height="57dp"
-        android:hint="제목"
+        android:layout_width="273dp"
+        android:layout_height="44dp"
+        android:hint="ex)기숙사 룸메이트 구해요"
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.824"
+        app:layout_constraintHorizontal_bias="0.971"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.178" />
+        app:layout_constraintVertical_bias="0.186" />
 
     <EditText
         android:id="@+id/content_edit"
-        android:layout_width="336dp"
-        android:layout_height="61dp"
-        android:hint="내용"
+        android:layout_width="331dp"
+        android:layout_height="77dp"
+        android:hint="ex)노악관 23학번입니다. 구체적인건 쪽지로 이야기 나눠요!"
         android:inputType="textMultiLine"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,6 +73,33 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.362" />
 
+    <!--
+    <TextView
+        android:layout_width="122dp"
+        android:layout_height="35dp"
+        android:text="비밀번호 입력"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.793" />
+
+    <EditText
+        android:id="@+id/password_edit"
+        android:layout_width="299dp"
+        android:layout_height="55dp"
+        android:hint="게시판 수정 시 필요한 비밀번호 입니다."
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.797" />
+-->
     <Button
         android:id="@+id/add_btn"
         android:layout_width="151dp"

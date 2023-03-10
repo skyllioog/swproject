@@ -61,7 +61,7 @@
         app:layout_constraintVertical_bias="0.177" />
 
     <EditText
-        android:id="@+id/update_age_edit"
+        android:id="@+id/update_content_edit"
         android:layout_width="346dp"
         android:layout_height="59dp"
         android:hint="내용"
@@ -73,6 +73,46 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.364" />
 
+    <!--
+    <TextView
+    android:layout_width="122dp"
+    android:layout_height="35dp"
+    android:text="비밀번호 입력"
+    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+    android:textSize="20sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.793" />
+
+
+    <EditText
+        android:id="@+id/password_edit"
+        android:layout_width="283dp"
+        android:layout_height="62dp"
+        android:hint="게시판 비밀번호를 입력해주세요."
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.797" />
+
+    <Button
+        android:id="@+id/password_btn"
+        android:layout_width="120dp"
+        android:layout_height="39dp"
+        android:text="비밀번호 확인"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.872" />
+-->
     <Button
         android:id="@+id/update_btn"
         android:layout_width="274dp"
@@ -83,6 +123,7 @@
         app:layout_constraintHorizontal_bias="0.583"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintVertical_bias="0.976"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

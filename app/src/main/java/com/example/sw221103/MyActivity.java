@@ -5,9 +5,12 @@ import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultCaller;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentResolver;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -19,6 +22,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -36,6 +41,9 @@ public class MyActivity extends AppCompatActivity implements View.OnClickListene
     String imgName = "osz.png";    // 이미지 이름
    // private ImageView imageview;
   // private final int GET_GALLERY_IMAGE = 200;
+   private TextView textivewDelete;
+   private TextView textviewFindPassword;
+
 
 
     public void bt1(View view) {    // 이미지 선택 누르면 실행됨 이미지 고를 갤러리 오픈
@@ -100,6 +108,12 @@ public class MyActivity extends AppCompatActivity implements View.OnClickListene
         setContentView(R.layout.my_activity);
 
         imageView = findViewById(R.id.imageView);
+        textivewDelete = (TextView) findViewById(R.id.textviewDelete);
+
+        textviewFindPassword = (TextView) findViewById(R.id.textViewFindpassword);
+        textviewFindPassword.setOnClickListener(this);
+
+        textivewDelete.setOnClickListener(this);
 
         try {
             String imgpath = getCacheDir() + "/" + imgName;   // 내부 저장소에 저장되어 있는 이미지 경로
@@ -135,7 +149,22 @@ public class MyActivity extends AppCompatActivity implements View.OnClickListene
         //textViewUserEmail의 내용을 변경해 준다.
         textViewUserEmail.setText("반갑습니다.\n"+ user.getEmail()+"님!");
 
-        buttonLogout.setOnClickListener(this);
+        //buttonLogout.setOnClickListener(this);
+
+        Button logoutButton = (Button) findViewById(R.id.buttonLogout);
+        logoutButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MyActivity.this, "로그아웃 되었습니다.", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(MyActivity.this, MainActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                //i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivity(i);
+                finish();
+            }
+
+        });
 
     }
     @Override
@@ -145,7 +174,44 @@ public class MyActivity extends AppCompatActivity implements View.OnClickListene
             startActivity(new Intent(this, MainActivity.class));
             finish();
         }
+        if(view == textivewDelete) {
+            AlertDialog.Builder alert_confirm = new AlertDialog.Builder(    MyActivity.this);
+            alert_confirm.setMessage("정말 계정을 삭제 할까요?").setCancelable(false).setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                            user.delete()
+                                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            Toast.makeText(MyActivity.this, "계정이 삭제 되었습니다.", Toast.LENGTH_LONG).show();
+                                            //finish();
+                                            //startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                            Intent i = new Intent(MyActivity.this, MainActivity.class);
+                                            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                                            //i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                                            startActivity(i);
+                                            finish();
+                                        }
+                                    });
+                        }
+                    }
+            );
+            alert_confirm.setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    Toast.makeText(MyActivity.this, "취소", Toast.LENGTH_LONG).show();
+                }
+            });
+            alert_confirm.show();
+        }
+        if(view == textviewFindPassword) {
+            finish();
+            startActivity(new Intent(this, FindActivity.class));
+        }
     }
+
+}
     /*
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -159,4 +225,3 @@ public class MyActivity extends AppCompatActivity implements View.OnClickListene
 
     }
      */
-}

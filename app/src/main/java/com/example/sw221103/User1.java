@@ -7,16 +7,19 @@ public class User1 {
     private String user_content;
     private String date;
     private String order_date;
+    private String password;
 
     User1(){
     }
-    public User1(String uid, String user_key, String user_name, String user_content, String date, String order_date){
+    public User1(String uid, String user_key, String user_name, String user_content,
+                 String date, String order_date, String password){
         this.user_key = user_key;
         this.user_name = user_name;
         this.user_content = user_content;
         this.date = date;
         this.order_date = order_date;
         this.uid = uid;
+        this.password = password;
     }
     public String getUid() {
         return uid;
@@ -42,5 +45,7 @@ public class User1 {
     public void setUser_date(String date){this.date = date;}
     public String getUser_order_date(){return order_date;}
     public void setUser_order_date(String order_date){this.order_date = order_date;}
+    public String getUser_password(){return password;}
+    public void setUser_password(String password){this.password = password;}
 
 }

@@ -51,7 +51,6 @@ public class ListActivity extends AppCompatActivity {
         loadData();
 
 
-
         new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
             @Override
             public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
@@ -93,7 +92,40 @@ public class ListActivity extends AppCompatActivity {
                 super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState,isCurrentlyActive);
             }
         }).attachToRecyclerView(recyclerView);
+
+        new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.RIGHT) {
+            @Override
+            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+                return false;
+            }
+
+            @Override
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+                int position = viewHolder.getBindingAdapterPosition();
+                switch(direction){
+                    case ItemTouchHelper.RIGHT:
+                        String key = list.get(position).getUser_key();
+                        DAOUser dao = new DAOUser();
+                }
+            }
+
+            //@Override
+            public void onChildDraw(@NonNull Canvas c , RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive){
+                new RecyclerViewSwipeDecorator.Builder(c, recyclerView, viewHolder,
+                        dX, dY, actionState, isCurrentlyActive)
+                        .addSwipeRightBackgroundColor(Color. BLUE)
+                        .addSwipeRightActionIcon(R.drawable.ic_delete)
+                        .addSwipeRightLabel("수정")
+                        .setSwipeRightLabelColor(Color.WHITE)
+                        .create()
+                        .decorate();
+
+                super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState,isCurrentlyActive);
+            }
+        }).attachToRecyclerView(recyclerView);
     }
+
+
     private void loadData(){
         dao.get().addValueEventListener(new ValueEventListener() {
             @Override
@@ -102,9 +134,9 @@ public class ListActivity extends AppCompatActivity {
 
                 for(DataSnapshot data:snapshot.getChildren()){
                     User1 user1 = data.getValue(User1.class);
-                    key = data.getKey();
-                    user1.setUser_key(key);
-                    list.add(user1);
+                    key = data.getKey(); // 키값 가져오기
+                    user1.setUser_key(key); // 키값 담기
+                    list.add(user1); //리스트에 담기
                 }
                 adapter.notifyDataSetChanged();
             }

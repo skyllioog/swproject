@@ -44,7 +44,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserVH> {
                 Intent intent = new Intent(context, UpdateActivity.class);
                 intent.putExtra("key", user1.getUser_key());
                 intent.putExtra("name", user1.getUser_name());
-                intent.putExtra("age", user1.getUser_content());
+                intent.putExtra("content", user1.getUser_content());
                 intent.putExtra("date", user1.getUser_date());
                 intent.putExtra("orderdate", user1.getUser_order_date());
                 context.startActivity(intent);
