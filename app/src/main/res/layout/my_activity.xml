@@ -47,34 +47,71 @@
         app:layout_constraintVertical_bias="1.0" />
 
 
-    <TextView
-        android:id="@+id/textviewUserEmail"
-        android:layout_width="254dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginBottom="576dp"
-        android:text="text"
+    <View
+        android:layout_width="400dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.782"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
-    <Button
-        android:id="@+id/buttonLogout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00ff0000"
-        android:text="로그아웃"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.594"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.964" />
+        app:layout_constraintVertical_bias="0.519" />
+
+    <View
+        android:layout_width="400dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.436" />
+
+    <View
+        android:layout_width="400dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.609" />
+
+    <View
+        android:layout_width="400dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.691" />
+
+    <TextView
+        android:id="@+id/textviewUserEmail"
+        android:layout_width="324dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="28dp"
+        android:gravity="center"
+        android:text="text"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.387"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.166" />
 
 
-
+    <!--
     <Button
         android:id="@+id/buttonMy"
         android:layout_width="wrap_content"
@@ -88,7 +125,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.964" />
 
-    <!--
+
     <Button
         android:id="@+id/user_button"
         android:layout_width="101dp"
@@ -117,6 +154,35 @@
         app:srcCompat="@drawable/user" />
 -->
 
+
+    <Button
+        android:id="@+id/buttonLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00ff0000"
+        android:text="로그아웃"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.581" />
+
+    <Button
+        android:id="@+id/buttonhome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00ff0000"
+        android:text="HOME"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.009"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.395" />
+
     <TextView
         android:id="@+id/textviewDelete"
         android:layout_width="wrap_content"
@@ -130,58 +196,61 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.834" />
-
+        app:layout_constraintVertical_bias="0.687" />
 
     <TextView
         android:id="@+id/textViewFindpassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="비밀번호 찾기"
+        android:text="비밀번호 변경"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.446" />
+        app:layout_constraintVertical_bias="0.484" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="82dp"
-        android:layout_height="21dp"
-        android:background="#ffffff"
-        android:onClick="bt2"
-        android:text="이미지 삭제"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.061"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.339" />
+    <!--
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="82dp"
+            android:layout_height="21dp"
+            android:background="#ffffff"
+            android:onClick="bt2"
+            android:text="이미지 삭제"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.061"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.339" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="89dp"
-        android:layout_height="19dp"
-        android:background="#ffffff"
-        android:onClick="bt1"
-        android:text="이미지 선택"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.296" />
+        <Button
+            android:id="@+id/button"
+            android:layout_width="89dp"
+            android:layout_height="19dp"
+            android:background="#ffffff"
+            android:onClick="bt1"
+            android:text="이미지 선택"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.049"
+            app:layout_constraintStart_toStartOf="parent"
+         pp:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.296" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="91dp"
-        android:layout_height="92dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.062"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.179" />
+        <!
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="91dp"
+            android:layout_height="92dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.062"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.179" />
+            -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

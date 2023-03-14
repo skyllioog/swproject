@@ -46,6 +46,7 @@ public class MyActivity extends AppCompatActivity implements View.OnClickListene
 
 
 
+   /*
     public void bt1(View view) {    // 이미지 선택 누르면 실행됨 이미지 고를 갤러리 오픈
         Intent intent = new Intent();
         intent.setType("image/*");
@@ -102,12 +103,14 @@ public class MyActivity extends AppCompatActivity implements View.OnClickListene
         }
     }
 
+    */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_activity);
 
-        imageView = findViewById(R.id.imageView);
+        //imageView = findViewById(R.id.imageView);
         textivewDelete = (TextView) findViewById(R.id.textviewDelete);
 
         textviewFindPassword = (TextView) findViewById(R.id.textViewFindpassword);
@@ -115,6 +118,7 @@ public class MyActivity extends AppCompatActivity implements View.OnClickListene
 
         textivewDelete.setOnClickListener(this);
 
+        /*
         try {
             String imgpath = getCacheDir() + "/" + imgName;   // 내부 저장소에 저장되어 있는 이미지 경로
             Bitmap bm = BitmapFactory.decodeFile(imgpath);
@@ -124,6 +128,7 @@ public class MyActivity extends AppCompatActivity implements View.OnClickListene
             Toast.makeText(getApplicationContext(), "파일 로드 실패", Toast.LENGTH_SHORT).show();
         }
 
+         */
 
         /*
         imageview = (ImageView)findViewById(R.id.imageView);
@@ -158,6 +163,20 @@ public class MyActivity extends AppCompatActivity implements View.OnClickListene
             public void onClick(View view) {
                 Toast.makeText(MyActivity.this, "로그아웃 되었습니다.", Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(MyActivity.this, MainActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                //i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivity(i);
+                finish();
+            }
+
+        });
+
+        Button home = (Button) findViewById(R.id.buttonhome);
+        home.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MyActivity.this, HomeActivity.class);
                 i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 //i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_SINGLE_TOP);
                 startActivity(i);

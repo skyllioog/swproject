@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.text.InputType;
@@ -14,6 +15,8 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import org.jetbrains.annotations.Nullable;
 
 import yuku.ambilwarna.AmbilWarnaDialog;
 
@@ -28,6 +31,7 @@ public class DrawActivity extends AppCompatActivity {
         setContentView(R.layout.draw_main);
         view = new MyPaintView(this);
 
+
         LinearLayout container = findViewById(R.id.container);
         Resources res = getResources();
 
@@ -37,7 +41,6 @@ public class DrawActivity extends AppCompatActivity {
 
 
         RadioGroup radioGroup = findViewById(R.id.radioGroup);
-
 
 
         Button btn=findViewById(R.id.colorPickerButton);
@@ -82,13 +85,11 @@ public class DrawActivity extends AppCompatActivity {
 
     }
 
-    private void openColorPicker() {
+    private void openColorPicker() { //색상 선택
         AmbilWarnaDialog colorPicker = new AmbilWarnaDialog(this, tColor, new AmbilWarnaDialog.OnAmbilWarnaListener() {
             @Override
             public void onCancel(AmbilWarnaDialog dialog) {
-
             }
-
             @Override
             public void onOk(AmbilWarnaDialog dialog, int color) {
                 Toast.makeText(getApplicationContext(),""+tColor,Toast.LENGTH_LONG).show();
