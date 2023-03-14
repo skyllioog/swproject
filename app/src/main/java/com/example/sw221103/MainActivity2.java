@@ -2,11 +2,15 @@ package com.example.sw221103;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Canvas;
+import android.graphics.Color;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -18,7 +22,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+
 import java.util.ArrayList;
+
+import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator;
 
 
 public class MainActivity2 extends AppCompatActivity {
@@ -54,7 +63,7 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View view, int position) {
                 Dictionary dict = mArrayList.get(position);
-                Toast.makeText(getApplicationContext(), dict.getId()+' '+dict.getTitle()+' '+dict.getContent(), Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(), dict.getId()+' '+dict.getTitle()+' '+dict.getContent(), Toast.LENGTH_LONG).show();
 
                 Intent intent = new Intent(getBaseContext(), ResultActivity.class);
 

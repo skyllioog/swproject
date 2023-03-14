@@ -45,9 +45,6 @@
             android:name=".MyActivity"
             android:exported="false" />
         <activity
-            android:name=".TodoActivity"
-            android:exported="false" />
-        <activity
             android:name=".study_activity2"
             android:exported="false" />
         <activity
@@ -61,10 +58,6 @@
             android:exported="false" />
 
         <activity
-            android:name=".Todo2Activity"
-            android:exported="false" />
-
-        <activity
             android:name=".MainActivity2"
             android:exported="false" />
         <activity
@@ -73,6 +66,14 @@
 
         <activity
             android:name=".FindActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".todo_main"
+            android:exported="false" />
+
+        <activity
+            android:name=".MapActivity"
             android:exported="false" />
 
         <activity android:name=".ChatMainActivity"

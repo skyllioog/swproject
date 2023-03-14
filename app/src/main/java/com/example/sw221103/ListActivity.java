@@ -32,7 +32,7 @@ public class ListActivity extends AppCompatActivity {
     ArrayList<User1> list = new ArrayList<>();
 
     @Override
-    protected  void onCreate(Bundle savedInstanceState){
+    protected  void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
 
@@ -60,7 +60,7 @@ public class ListActivity extends AppCompatActivity {
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 int position = viewHolder.getBindingAdapterPosition();
-                switch(direction){
+                switch (direction) {
                     case ItemTouchHelper.LEFT:
                         String key = list.get(position).getUser_key();
                         DAOUser dao = new DAOUser();
@@ -79,7 +79,7 @@ public class ListActivity extends AppCompatActivity {
             }
 
             //@Override
-            public void onChildDraw(@NonNull Canvas c , RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive){
+            public void onChildDraw(@NonNull Canvas c, RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
                 new RecyclerViewSwipeDecorator.Builder(c, recyclerView, viewHolder,
                         dX, dY, actionState, isCurrentlyActive)
                         .addSwipeLeftBackgroundColor(Color.RED)
@@ -89,42 +89,11 @@ public class ListActivity extends AppCompatActivity {
                         .create()
                         .decorate();
 
-                super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState,isCurrentlyActive);
+                super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
             }
         }).attachToRecyclerView(recyclerView);
 
-        new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.RIGHT) {
-            @Override
-            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
-                return false;
-            }
-
-            @Override
-            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
-                int position = viewHolder.getBindingAdapterPosition();
-                switch(direction){
-                    case ItemTouchHelper.RIGHT:
-                        String key = list.get(position).getUser_key();
-                        DAOUser dao = new DAOUser();
-                }
-            }
-
-            //@Override
-            public void onChildDraw(@NonNull Canvas c , RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive){
-                new RecyclerViewSwipeDecorator.Builder(c, recyclerView, viewHolder,
-                        dX, dY, actionState, isCurrentlyActive)
-                        .addSwipeRightBackgroundColor(Color. BLUE)
-                        .addSwipeRightActionIcon(R.drawable.ic_delete)
-                        .addSwipeRightLabel("수정")
-                        .setSwipeRightLabelColor(Color.WHITE)
-                        .create()
-                        .decorate();
-
-                super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState,isCurrentlyActive);
-            }
-        }).attachToRecyclerView(recyclerView);
     }
-
 
     private void loadData(){
         dao.get().addValueEventListener(new ValueEventListener() {

@@ -45,7 +45,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), TodoActivity.class);
+                Intent intent = new Intent(HomeActivity.this, todo_main.class);
                 startActivity(intent);
             }
         });
@@ -70,6 +70,20 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
+        /*
+        Button todot = (Button) findViewById(R.id.todot);
+        todot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, todo_main.class);
+                startActivity(intent);
+            }
+        });
+
+
+         */
+
+
         Button draw = (Button) findViewById(R.id.draw);
         draw.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,6 +104,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
+        /*
         Button to2test = (Button) findViewById(R.id.to2test);
         to2test.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,6 +114,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
+
+         */
         Button writetest = (Button) findViewById(R.id.writetest);
         writetest.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,7 +133,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
             }
         });
-/*
+
         Button map = (Button) findViewById(R.id.map);
         map.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -126,7 +143,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
- */
+
 
         Button home = (Button) findViewById(R.id.home);
         home.setOnClickListener(new View.OnClickListener() {
