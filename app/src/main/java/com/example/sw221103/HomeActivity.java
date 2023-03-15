@@ -28,7 +28,7 @@ import android.content.Intent;
 import android.net.Uri;
 
 
-public class HomeActivity extends AppCompatActivity implements View.OnClickListener{
+public class HomeActivity extends AppCompatActivity{
 
     private FirebaseAuth firebaseAuth;
     private Button buttonLogout;
@@ -50,17 +50,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-/*
-        Button butstudy = (Button) findViewById(R.id.butstudy);
-        butstudy.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), study_activity2.class);
-                startActivity(intent);
-            }
-        });
- */
-
         Button board = (Button) findViewById(R.id.board);
         board.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,57 +59,11 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-        /*
-        Button todot = (Button) findViewById(R.id.todot);
-        todot.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, todo_main.class);
-                startActivity(intent);
-            }
-        });
-
-
-
-
-
-        Button draw = (Button) findViewById(R.id.draw);
-        draw.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, DrawActivity.class);
-                startActivity(intent);
-            }
-        });
-*/
-
-
         Button buttonMy = (Button) findViewById(R.id.buttonMy);
         buttonMy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomeActivity.this, MyActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        /*
-        Button to2test = (Button) findViewById(R.id.to2test);
-        to2test.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, Todo2Activity.class);
-                startActivity(intent);
-            }
-        });
-
-
-         */
-        Button writetest = (Button) findViewById(R.id.writetest);
-        writetest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, MainActivity2.class);
                 startActivity(intent);
             }
         });
@@ -143,39 +86,18 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-        /*
-        Button chattest = (Button) findViewById(R.id.chattest);
-        chattest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, startActivity.class);
-                startActivity(intent);
-            }
-        });
-         */
-
-
 
         Button home = (Button) findViewById(R.id.home);
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, HomeActivity.class);
-                startActivity(intent);
+                Intent i = new Intent(HomeActivity.this, HomeActivity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(i);
+                finish();
             }
         });
 
-/*
-        buttonLogout = (Button) findViewById(R.id.buttonLogout);
-
-        firebaseAuth = FirebaseAuth.getInstance();
-
-        FirebaseUser user = firebaseAuth.getCurrentUser();
-
-        buttonLogout.setOnClickListener(this);
-
-
-*/
 
         Button call = (Button) findViewById(R.id.call);
         call.setOnClickListener(new View.OnClickListener() {
@@ -185,30 +107,5 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-        Button logoutButton = (Button) findViewById(R.id.buttonLogout);
-        logoutButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(HomeActivity.this, "로그아웃 되었습니다.", Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(HomeActivity.this, MainActivity.class);
-                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-                //i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                startActivity(i);
-                finish();
-            }
-
-        });
-
-    }
-
-    @Override
-    public void onClick(View view) {
-        if (view == buttonLogout) {
-            firebaseAuth.signOut();
-            finish();
-            startActivity(new Intent(this, MainActivity.class));
-        }
     }
 }
-

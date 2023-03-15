@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="412dp"
-        android:layout_height="105dp"
+        android:layout_height="90dp"
         android:src="@drawable/android_lar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -18,27 +18,26 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="47dp"
-        android:layout_height="46dp"
-        android:layout_gravity="center"
-        android:src="@drawable/main"
+        android:id="@+id/imageView9"
+        android:layout_width="413dp"
+        android:layout_height="90dp"
+        android:src="@drawable/android_lar2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="0.043" />
+        app:layout_constraintVertical_bias="1.0" />
+
 
     <Button
         android:id="@+id/board"
         android:layout_width="360dp"
         android:layout_height="126dp"
         android:fontFamily="@font/fontstyle"
-        android:text="Board"
+        android:text="홍보글"
         android:textColor="@color/black"
+        android:background="@drawable/android_lar3"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,8 +51,9 @@
         android:layout_width="183dp"
         android:layout_height="104dp"
         android:fontFamily="@font/fontstyle"
-        android:text="TODO"
+        android:text="할 일"
         android:textColor="@color/black"
+        android:background="@drawable/android_lar3"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,8 +67,9 @@
         android:layout_width="183dp"
         android:layout_height="104dp"
         android:fontFamily="@font/fontstyle"
-        android:text="CHAT"
+        android:text="채팅"
         android:textColor="@color/black"
+        android:background="@drawable/android_lar3"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,7 +83,8 @@
         android:layout_width="366dp"
         android:layout_height="235dp"
         android:fontFamily="@font/fontstyle"
-        android:text="MAP"
+        android:background="@drawable/android_lar3"
+        android:text="지도"
         android:textColor="@color/black"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -91,88 +93,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="413dp"
-        android:layout_height="99dp"
-        android:src="@drawable/android_lar2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="1.0" />
-
-
     <Button
         android:id="@+id/home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00ff0000"
-        android:text="home"
+        android:layout_width="35dp"
+        android:layout_height="37dp"
+        android:background="@drawable/main"
         app:layout_constraintBottom_toBottomOf="@+id/imageView9"
         app:layout_constraintEnd_toEndOf="@+id/imageView9"
-        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.959" />
-
-
-    <!--
-    <Button
-        android:id="@+id/draw"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00ff0000"
-        android:text="그림판"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView9"
-        app:layout_constraintEnd_toEndOf="@+id/imageView9"
-        app:layout_constraintHorizontal_bias="0.36"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.959" />
-        -->
-
-
-    <Button
-        android:id="@+id/writetest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00ff0000"
-        android:text="게시판테"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView9"
-        app:layout_constraintEnd_toEndOf="@+id/imageView9"
-        app:layout_constraintHorizontal_bias="0.944"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.042" />
-
-    <!--
-    <Button
-        android:id="@+id/chattest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00ff0000"
-        android:text="채팅테"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView9"
-        app:layout_constraintEnd_toEndOf="@+id/imageView9"
-        app:layout_constraintHorizontal_bias="0.249"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.026" />
-        -->
-
-    <Button
-        android:id="@+id/buttonLogout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="120dp"
-        android:background="#00ff0000"
-        android:text="로그아웃"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView9"
-        app:layout_constraintEnd_toEndOf="@+id/imageView9"
-        app:layout_constraintTop_toTopOf="@+id/imageView9"
-        app:layout_constraintVertical_bias="0.45" />
-
+        app:layout_constraintVertical_bias="0.963" />
 
     <Button
         android:id="@+id/call"
@@ -181,22 +112,21 @@
         android:background="@drawable/alarm"
         app:layout_constraintBottom_toBottomOf="@+id/imageView9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintHorizontal_bias="0.058"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.041" />
 
     <Button
         android:id="@+id/buttonMy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00ff0000"
-        android:text="My"
+        android:layout_width="40dp"
+        android:layout_height="37dp"
+        android:background="@drawable/my"
         app:layout_constraintBottom_toBottomOf="@+id/imageView9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.904"
+        app:layout_constraintHorizontal_bias="0.956"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.959" />
+        app:layout_constraintVertical_bias="0.041" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

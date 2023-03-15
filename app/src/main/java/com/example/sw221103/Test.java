@@ -37,7 +37,7 @@ public class Test extends AppCompatActivity {
         FirebaseUser user = mAuth.getCurrentUser();
         mDatabase = FirebaseDatabase.getInstance().getReference();
         EditText name_edit = findViewById(R.id.name_edit);
-        EditText content_edit = findViewById(R.id.content_edit);
+        //EditText content_edit = findViewById(R.id.content_edit);
         //EditText password_edit = findViewById(R.id.password_edit);
         Button addBtn = findViewById(R.id.add_btn);
 
@@ -49,10 +49,11 @@ public class Test extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String name = name_edit.getText().toString();
-                String content = content_edit.getText().toString();
+                //String content = content_edit.getText().toString();
                 //String password = password_edit.getText().toString();
 
-                User1 user1 = new User1(uid, "", name, content, date, order_date, password);
+                //User1 user1 = new User1(uid, "", name, content, date, order_date, password);
+                User1 user1 = new User1(uid, "", name, date, order_date, password);
 
 
                 dao.add(user1).addOnSuccessListener(new OnSuccessListener<Void>() {

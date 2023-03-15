@@ -4,18 +4,18 @@ public class User1 {
     private String uid;
     private String user_key;
     private String user_name;
-    private String user_content;
+    //private String user_content;
     private String date;
     private String order_date;
     private String password;
 
     User1(){
     }
-    public User1(String uid, String user_key, String user_name, String user_content,
+    public User1(String uid, String user_key, String user_name,
                  String date, String order_date, String password){
         this.user_key = user_key;
         this.user_name = user_name;
-        this.user_content = user_content;
+        //this.user_content = user_content;
         this.date = date;
         this.order_date = order_date;
         this.uid = uid;
@@ -39,8 +39,8 @@ public class User1 {
     public void setUser_name(String user_name){
         this.user_name = user_name;
     }
-    public String getUser_content(){return user_content;}
-    public void setUser_content(String user_content){this.user_content = user_content;}
+    //public String getUser_content(){return user_content;}
+    //public void setUser_content(String user_content){this.user_content = user_content;}
     public String getUser_date(){return date;}
     public void setUser_date(String date){this.date = date;}
     public String getUser_order_date(){return order_date;}
