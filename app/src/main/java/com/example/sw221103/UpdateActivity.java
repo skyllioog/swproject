@@ -3,6 +3,8 @@ package com.example.sw221103;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.InputFilter;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -95,5 +97,31 @@ public class UpdateActivity extends AppCompatActivity {
             updateNameEdit.setText(sName);
             updateContentEdit.setText(sContent);
         }
+    }
+
+    @Override
+    //액티비티가 만들어질 때 미리 자동 호출
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.navi_menu, menu); //menu_main.xml 인플레이션
+
+        return true;
+    }
+    @Override
+    //사용자가 메뉴 아이템을 선택했을 때 호출
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int curId = item.getItemId();
+        switch (curId) {
+            case R.id.item_up:
+                Toast.makeText(this, "새로고침 메뉴가 선택되었습니다.", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.item_de:
+                Toast.makeText(this, "검색 메뉴가 선택되었습니다.", Toast.LENGTH_SHORT).show();
+                break;
+
+            default:
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

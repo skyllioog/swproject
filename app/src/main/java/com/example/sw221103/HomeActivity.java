@@ -81,7 +81,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         });
 
 
-         */
+
 
 
         Button draw = (Button) findViewById(R.id.draw);
@@ -92,7 +92,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
             }
         });
-
+*/
 
 
         Button buttonMy = (Button) findViewById(R.id.buttonMy);
@@ -129,7 +129,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, ChatMainActivity.class);
+                Intent intent = new Intent(HomeActivity.this, startActivity.class);
                 startActivity(intent);
             }
         });
@@ -142,6 +142,17 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
             }
         });
+
+        /*
+        Button chattest = (Button) findViewById(R.id.chattest);
+        chattest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, startActivity.class);
+                startActivity(intent);
+            }
+        });
+         */
 
 
 

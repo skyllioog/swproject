@@ -2,19 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/item_info"
-        android:title="내 정보" />
+        android:id="@+id/item_up"
+        android:title="수정하기" />
     <item
-        android:id="@+id/item_report"
-        android:title="리포트" />
-    <item
-        android:id="@+id/item_setting"
-        android:title="계정 설정" />
-    <item
-        android:id="@+id/item_notice"
-        android:title="공지사항" />
-    <item
-        android:id="@+id/item_service_center"
-        android:title="고객센터" />
+        android:id="@+id/item_de"
+        android:title="삭제하기" />
+
 
 </menu>

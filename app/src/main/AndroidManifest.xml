@@ -73,18 +73,17 @@
             android:exported="false" />
 
         <activity
+            android:name=".startActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".MapActivity"
             android:exported="false" />
 
-        <activity android:name=".ChatMainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity
+            android:name=".ChatActivity"
+            android:exported="false" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".ChatRoomActivity"/>
         <activity android:name=".DrawActivity"/>
     </application>
 
